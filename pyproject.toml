@@ -1,0 +1,19 @@
+[project]
+name = "regulon"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv.workspace]
+members = ["packages/*"]
+
+[tool.uv.sources]
+regulon-schema = { workspace = true }
+regulon-ml = { workspace = true }
+regulon-inference = { workspace = true }
+regulon-rag = { workspace = true }
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.12",
+]

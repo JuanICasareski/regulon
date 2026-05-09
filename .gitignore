@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# uv / venv
+.venv/
+.env
+.env.*
+!.env.example
+
+# Build
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML / data / modelos (pesados, no van a git)
+*.pt
+*.pth
+*.safetensors
+*.bin
+*.gguf
+*.onnx
+checkpoints/
+runs/
+wandb/
+mlruns/
+outputs/
+data/raw/
+data/processed/
+*.parquet
+*.arrow
+
+# IDE
+.idea/
+*.swp
+.DS_Store
+
+# Logs
+*.log
+logs/

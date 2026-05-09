@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Formatea SOLO los archivos .py en staging, y re-stagea los cambios.
+set -e
+
+files=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.py$' || true)
+[ -z "$files" ] && exit 0
+
+echo "ruff format → $(echo "$files" | wc -l) archivo(s)"
+echo "$files" | xargs uv run ruff format
+echo "$files" | xargs uv run ruff check --fix --exit-zero
+
+echo "$files" | xargs git add
