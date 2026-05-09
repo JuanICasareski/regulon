@@ -5,8 +5,8 @@ requires-python = ">=3.12"
 [manifest]
 members = [
     "regulon",
+    "regulon-classifier",
     "regulon-inference",
-    "regulon-ml",
     "regulon-rag",
     "regulon-schema",
 ]
@@ -27,14 +27,14 @@ dev = [
 dev = [{ name = "ruff", specifier = ">=0.15.12" }]
 
 [[package]]
+name = "regulon-classifier"
+version = "0.1.0"
+source = { editable = "packages/classifier" }
+
+[[package]]
 name = "regulon-inference"
 version = "0.1.0"
 source = { editable = "packages/inference" }
-
-[[package]]
-name = "regulon-ml"
-version = "0.1.0"
-source = { editable = "packages/ml" }
 
 [[package]]
 name = "regulon-rag"

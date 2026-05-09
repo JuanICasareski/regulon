@@ -1,5 +1,5 @@
 [project]
-name = "regulon-ml"
+name = "regulon-classifier"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -10,7 +10,7 @@ requires-python = ">=3.12"
 dependencies = []
 
 [project.scripts]
-regulon-ml = "regulon_ml:main"
+regulon-classifier = "regulon_classifier:main"
 
 [build-system]
 requires = ["uv_build>=0.11.7,<0.12.0"]

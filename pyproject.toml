@@ -9,7 +9,7 @@ members = ["packages/*"]
 
 [tool.uv.sources]
 regulon-schema = { workspace = true }
-regulon-ml = { workspace = true }
+regulon-classifier = { workspace = true }
 regulon-inference = { workspace = true }
 regulon-rag = { workspace = true }
 
