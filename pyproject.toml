@@ -2,7 +2,9 @@
 name = "regulon"
 version = "0.1.0"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "duckdb>=1.5.2",
+]
 
 [tool.uv.workspace]
 members = ["packages/*"]
@@ -12,6 +14,7 @@ regulon-schema = { workspace = true }
 regulon-classifier = { workspace = true }
 regulon-inference = { workspace = true }
 regulon-rag = { workspace = true }
+regulon-data = { workspace = true }
 
 [dependency-groups]
 dev = [

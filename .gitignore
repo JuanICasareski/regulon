@@ -35,6 +35,7 @@ outputs/
 data/raw/
 data/processed/
 *.parquet
+*.csv
 *.arrow
 
 # IDE
@@ -45,3 +46,7 @@ data/processed/
 # Logs
 *.log
 logs/
+
+# stuff
+reference/
+reference/*
