@@ -44,10 +44,23 @@ export default $config({
       { batch: { size: 1 } },
     );
 
+    // Trigger manual: consolida runs/<runId>/*.json en un único parquet.
+    const consolidate = new sst.aws.Function("ConsolidateRun", {
+      handler: "src/handlers/consolidate-run.handler",
+      link: [results],
+      timeout: "300 seconds",
+      memory: "1024 MB",
+      nodejs: {
+        // parquetjs-lite usa thrift y otros módulos que no se bundlean bien con esbuild.
+        install: ["parquetjs-lite"],
+      },
+    });
+
     return {
       queueUrl: queue.url,
       dlqUrl: dlq.url,
       bucketName: results.name,
+      consolidateFn: consolidate.name,
     };
   },
 });
