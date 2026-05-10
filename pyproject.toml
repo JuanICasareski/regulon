@@ -8,15 +8,18 @@ dependencies = [
 
 [tool.uv.workspace]
 members = ["packages/*"]
+exclude = ["packages/data"]
 
 [tool.uv.sources]
 regulon-schema = { workspace = true }
 regulon-classifier = { workspace = true }
 regulon-inference = { workspace = true }
 regulon-rag = { workspace = true }
-regulon-data = { workspace = true }
 
 [dependency-groups]
 dev = [
+    "jupyter>=1.1.1",
+    "jupytext>=1.19.1",
+    "pandas>=3.0.2",
     "ruff>=0.15.12",
 ]

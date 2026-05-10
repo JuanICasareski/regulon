@@ -50,3 +50,12 @@ logs/
 # stuff
 reference/
 reference/*
+
+
+# TypeScript / SST
+node_modules
+dist/
+*.tsbuildinfo
+.sst/
+sst-env.d.ts
+.open-next/

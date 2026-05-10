@@ -1,0 +1,27 @@
+{
+  "name": "@regulon/data",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit",
+    "sst": "sst",
+    "enqueue": "sst shell -- tsx src/enqueue.ts"
+  },
+  "packageManager": "pnpm@10.33.0",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1045.0",
+    "@aws-sdk/client-sqs": "^3.1045.0",
+    "got-scraping": "^4.2.1",
+    "sst": "^4.13.1",
+    "uuid": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.161",
+    "@types/node": "^22.10.0",
+    "@types/uuid": "^11.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.0"
+  }
+}
